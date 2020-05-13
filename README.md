@@ -1,3 +1,26 @@
+# React Tesla Battery Range Calculator 🐰 
+ 📦 This project is simply create complete applications using React and Redux by building Tesla's Battery Range Calculator.
+
+ 📚 Building Tesla’s battery range calculator by Matthew Choi ! live version : 
+
+
+ 🚀 http://react-tesla-charge-calculator.surge.sh/ 🚀 
+
+##################
+******************
+   ************
+   
+ 🍸Happy coding🍸
+
+   ************
+******************
+##################
+
+🛬 
+🛬 
+🛬 
+🛬 
+🛬 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
