@@ -4,6 +4,7 @@ import TeslaNotice from "../components/TeslaNotice/TeslaNotice";
 import TeslaCar from "../components/TeslaCar/TeslaCar";
 import TeslaStats from "../components/TeslaStats/TeslaStats";
 import TeslaCounter from "../components/TeslaCounter/TeslaCounter";
+import TeslaClimate from "../components/TeslaClimate/TeslaClimate";
 import { getModelData } from "../services/BatteryService";
 
 class TeslaBattery extends React.Component {
@@ -90,6 +91,11 @@ class TeslaBattery extends React.Component {
       this.updateCounterState(title, newValue);
     }
   }
+  handleChangeClimate() {
+    const config = { ...this.state.config };
+    config["climate"] = !this.state.config.climate;
+    this.setState({ config });
+  }
   render() {
     // takes out required values and create references to them
     const { carstats, config } = this.state;
@@ -112,8 +118,14 @@ class TeslaBattery extends React.Component {
               increment={(e, title) => this.increment(e, title)}
               decrement={(e, title) => this.decrement(e, title)}
             />
+            <TeslaClimate
+              value={this.state.config.climate}
+              limit={this.state.config.temperature > 10} // bool
+              handleChangeClimate={() => this.handleChangeClimate()}
+            />
           </div>
         </div>
+
         <TeslaNotice />
       </form>
     );
