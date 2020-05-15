@@ -5,6 +5,7 @@ import TeslaCar from "../components/TeslaCar/TeslaCar";
 import TeslaStats from "../components/TeslaStats/TeslaStats";
 import TeslaCounter from "../components/TeslaCounter/TeslaCounter";
 import TeslaClimate from "../components/TeslaClimate/TeslaClimate";
+import TeslaWheels from '../components/TeslaWheels/TeslaWheels';
 import { getModelData } from "../services/BatteryService";
 
 class TeslaBattery extends React.Component {
@@ -96,6 +97,11 @@ class TeslaBattery extends React.Component {
     config["climate"] = !this.state.config.climate;
     this.setState({ config });
   }
+  handleChangeWheels(size) {
+    const config = {...this.state.config};
+    config['wheels'] = size;
+    this.setState({ config });
+  }
   render() {
     // takes out required values and create references to them
     const { carstats, config } = this.state;
@@ -124,6 +130,10 @@ class TeslaBattery extends React.Component {
               handleChangeClimate={() => this.handleChangeClimate()}
             />
           </div>
+          <TeslaWheels
+            value={this.state.config.wheels}
+            handleChangeWheels={(size)=>this.handleChangeWheels(size)}
+          />
         </div>
 
         <TeslaNotice />
