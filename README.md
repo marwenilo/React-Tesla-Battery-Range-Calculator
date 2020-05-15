@@ -4,7 +4,7 @@
  📚 Building Tesla’s battery range calculator by Matthew Choi ! live version : 
 
 
- 🚀 http://react-tesla-charge-calculator.surge.sh/ 🚀 
+ 🚀 https://marwen-tesla-battery.surge.sh/ 🚀 
 
 ##################
 ******************
